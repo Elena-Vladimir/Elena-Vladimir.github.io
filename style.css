@@ -1,0 +1,783 @@
+body {
+    margin: 0;
+    font-family: 'PT Astra Serif';
+    color: black;
+	font-size: 16px;
+}
+
+@font-face {
+	font-family: 'Scriptorama';
+	src: url(fonts/ofont.ru_Scriptorama.ttf); 
+}
+@font-face {
+	font-family: 'PT Astra Serif';
+    src: url(fonts/PT-Astra-Serif_Regular.ttf); 
+}
+@font-face {
+	font-family: 'PT Astra Serif Italic';
+    src: url(fonts/PT-Astra-Serif_Italic.ttf);
+}
+
+/*НАВИГАЦИЯ*/
+
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+li a:hover:not(.active) {
+    color: #c1858f;
+}
+
+li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+
+
+/*ИНТРО САЙТА С ТАЙМЕРОМ*/
+#intro {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background: url(img/arrange-306066.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    font-family: 'Scriptorama'; 
+}
+
+.timer {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.timer p {
+    max-width: 50%; 
+    font-size: 50px;
+    color: #fff;
+    transform: scale3d(1.5, 1, 2);
+    margin-left: 25%; 
+}
+
+.intro_text1 {
+    margin: -25px;
+}
+
+.intro_text2{
+    margin: -25px;
+}
+
+.intro_text3 {
+    margin: -25px;
+}
+
+a.boot {
+  -webkit-transform: translate3D(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  color: #fff;
+  padding: 14px 24px 12px;
+  font-family: "Helvetica";
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 20px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display:block;
+  width: 15%;
+  margin:20px auto;
+  text-align:center;
+}
+
+a.boot:after {
+  padding: 0;
+  border: 2px solid #fff;
+  content: '';
+  width: 95%;
+  height: 46px;
+  display: block;
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+a.boot:before {
+  -webkit-transition: all 0s ease-in-out;
+  -moz-transition: all 0s ease-in-out;
+  -o-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  content: '';
+  width: 100%;
+  height: 60px;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  border-left: 15px solid white;
+  box-shadow: -20px 30px 30px white;
+  background: transparent;
+  top: 0px;
+  left: -15px;
+  margin-left: -1px;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+ a.boot:hover:before, a.boot:active:before, a.boot:focus:before {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: translate(115%, 0);
+  -moz-transform: translate(115%, 0);
+  -ms-transform: translate(115%, 0);
+  -o-transform: translate(115%, 0);
+  transform: translate(115%, 0);
+}
+
+.invit {
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.timer__items {
+    display: flex;
+    font-size: 48px;
+}
+
+.timer__item {
+    position: relative;
+    min-width: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.timer__item::before {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
+
+.timer__item:not(:last-child)::after {
+    content: ':';
+    position: absolute;
+    right: -15px;
+}
+
+#history {
+    margin-top: -35px;
+    background: url(img/image%209.png) center no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.history_content {
+    margin: auto;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.meeting {
+    font-size: 40px;
+}
+
+.history_name {
+    font-size: 32px;
+}
+
+.history_history {
+    font-size: 20px;
+    font-family: 'PT Astra Serif';
+}
+
+.history1 {
+    max-width: 500px;
+    background-color: white;
+    padding: 40px;
+}
+
+.history_photo img{
+    width: 650px;
+}
+
+.title {
+    /* Чтобы спрятать часть линий, которые 
+    ** будут вылазить за пределы блока */
+    overflow: hidden;
+    /* Выравнивание заголовка по центру, 
+    ** можно использовать left, right */
+    text-align: center;
+    /* Тут можно добавить другие стили для заголовка */
+    font-size: 30px;
+}
+
+.title:before,
+.title:after {
+    content: "";
+    /* Указываем что наши линии будут строчно-блочные и 
+    ** выравнивание по высоте - по центру */
+    display: inline-block;
+    vertical-align: middle;
+    /* Задаем ширину 100% и выбираем высоту линии, 
+    ** в нашем примере она равна 4 пикселям */
+    width: 20%;
+    height: 4px;
+    /* Добавляем цвет для линии */
+    background-color: #c1858f;
+    /* Добавляем пседоэлемантам возможность изменить 
+    ** позицию линии, для создания отступов от текста */
+    position: relative;
+}
+.title:before {
+    /* Смещаем левую линию на 100% влево, чтобы линия 
+    ** встала рядом с текстом слева */
+    margin-left: -10%;
+    /* Указываем в пикселях отступ линии от текста заголовка */
+    left: -14px;
+}
+.title:after {
+    /* Смещаем правую линию на 100% вправо, чтобы 
+    ** линия встала рядом с текстом справа */
+    margin-right: -10%;
+    /* Указываем в пикселях отступ линии от текста заголовка */
+    right: -14px;
+}
+
+boot2 {
+    margin-bottom: 25px;
+}
+
+a.boot2 {
+  -webkit-transform: translate3D(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  color: #c1858f;
+  padding: 14px 24px 12px;
+  font-family: "Helvetica";
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  display:block;
+  width: 15%;
+  margin:20px auto;
+  text-align:center;
+}
+
+a.boot2:after {
+  padding: 0;
+  border: 2px solid #c1858f;
+  content: '';
+  width: 95%;
+  height: 46px;
+  display: block;
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+a.boot2:before {
+  -webkit-transition: all 0s ease-in-out;
+  -moz-transition: all 0s ease-in-out;
+  -o-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  content: '';
+  width: 100%;
+  height: 60px;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  border-left: 15px solid #c1858f;
+  box-shadow: -20px 30px 30px #c1858f;
+  background: transparent;
+  top: 0px;
+  left: -15px;
+  margin-left: -1px;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+ a.boot2:hover:before, a.boot2:active:before, a.boot2:focus:before {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: translate(115%, 0);
+  -moz-transform: translate(115%, 0);
+  -ms-transform: translate(115%, 0);
+  -o-transform: translate(115%, 0);
+  transform: translate(115%, 0);
+}
+
+#ceremony {
+    margin: 0px;
+    height: 100vh;
+    width: 100%;
+    background: url(img/decorated-hall-for-an-event.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ceremony {
+    font-size: 68px;
+    color: white;
+}
+
+.adres {
+    margin-top: -50px;
+    background: url(img/image%209.png) center no-repeat;
+    background-size: cover;
+    padding: 70px;
+}
+
+.aa {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+
+.regist_map {
+    width=600amp;
+    height=500amp;
+    justify-content: center;
+    display: flex;
+}
+
+.night_map {
+    width = 600amp;
+    height = 500amp;
+    justify-content: center;
+    display: flex;
+}
+
+.namber {
+    font-family: 'PT Astra Serif Italic';
+    font-size: 46px;
+    color: #c1858f;
+}
+
+.adres-text {
+    font-family: 'PT Astra Serif';
+    font-size: 32px;
+}
+
+.time {
+    color: #c1858f;
+}
+
+#contacts {
+    margin: 0px;
+    height: 100vh;
+    width: 100%;
+    background: url(img/2.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 68px;
+}
+
+.contacts {
+    background: url(img/image%209.png) center no-repeat;
+    background-size: cover;
+}
+
+.cont {
+    padding: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.qq {
+    font-family: 'PT Astra Serif';
+    font-size: 42px;
+}
+
+.mesenger {
+   width: 500px;
+}
+
+.olga, .paha {
+    margin-bottom: 20%;
+    font-size: 32px;
+    font-family: 'PT Astra Serif';
+}
+
+.vk {
+    width: 70px;
+    height: 70px;
+    background: url(img/vk.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    margin-right: 30px;
+    
+}
+
+.vk:hover {
+    width: 70px;
+    height: 70px;
+    background: url(img/vkcolor.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-phone {
+    width: 70px;
+    height: 70px;
+    background: url(img/phone.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    margin-right: 30px;
+}
+
+.icon-phone:hover {
+    width: 70px;
+    height: 70px;
+    background: url(img/phone-color.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.xxx {
+    font-family: 'PT Astra Serif';
+    height: 70px;
+    line-height: 70px;
+    font-size: 28px;
+}
+
+.xxx:hover {
+    color: #c1858f;
+}
+
+#color {
+    max-width: 103%;
+    margin: -50px;
+    background: url(img/image%209.png) center no-repeat;
+    background-size: cover;
+}
+
+.color {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.text-color {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 900px;
+    font-size: 38px;
+}
+
+.color-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.color1 {
+    width: 230px;
+    height: 230px;
+    background: #945661;
+    border-radius: 50%;
+}
+.color2 {
+    width: 230px;
+    height: 230px;
+    background: #D57A8C;
+    border-radius: 50%;
+    margin: 25px;
+}
+.color3 {
+    width: 230px;
+    height: 230px;
+    background: #C1858F;
+    border-radius: 50%;
+    margin: 25px;
+}
+.color4 {
+    width: 230px;
+    height: 230px;
+    background: #C28B86;
+    border-radius: 50%;
+    margin: 25px;
+}
+.color5 {
+    width: 230px;
+    height: 230px;
+    background: #C5A098;
+    border-radius: 50%;
+    margin: 25px;
+}
+
+@media screen and (max-width : 575px) { 
+ul{
+        display: none;
+    } 
+.timer {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.timer p {
+    font-size: 24px;
+    color: #fff;
+    transform: scale3d(1.5, 1, 2);
+}
+.intro_text1 {
+    margin: 25px;
+}
+.intro_text2{
+    margin: 25px;
+}
+.intro_text3 {
+    margin: 25px;
+}
+#intro {
+        font-family: 'PT Astra Serif';
+        text-align: center;
+        line-height: 35px;
+        height: 80vh;
+    }   
+a.boot{
+        font-size: 24px;
+        width: 45%;
+    }
+a.boot2{
+        font-size: 24px;
+        width: 45%;
+    }
+    
+    .history_photo img{
+        width: 400px;
+    }
+.img-contact{
+        display: none;
+    }
+#ceremony{
+        height: 50vh;
+    }
+.ceremony{
+        font-size: 48px;
+    }
+#contacts{
+        height: 50vh;
+        font-size: 48px;
+    }
+    #color {
+        max-width: 113%;
+    }
+.text-color {
+        max-width: 300px;
+        font-size: 24px;
+    }
+.color1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.color2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.color3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.color4 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.color5 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+}
+}
+
+@media screen and (max-width : 1200px) {
+    
+    
+        .color1 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.color2 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.color3 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.color4 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.color5 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px;
+}
+}
+
+@media screen and (max-width : 992px) {
+    
+    
+    .history1{
+        margin-top: 50px;
+    }
+    
+    .history_photo{
+        width: 500px;
+    }
+     img-contact{
+        display: none;
+    }
+        .color1 {
+    width: 1300px;
+    height: 1300px;
+    border-radius: 50%;
+}
+.color2 {
+    width: 1300px;
+    height: 1300px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.color3 {
+    width: 1300px;
+    height: 1300px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.color4 {
+    width: 1300px;
+    height: 1300px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.color5 {
+    width: 1300px;
+    height: 1300px;
+    border-radius: 50%;
+    margin: 10px;
+}
+    
+    .img-contact{
+        display: none;
+    }
+}
+
+@media screen and (max-width : 767px) {
+    
+    li a {
+        font-size: 18px;
+    }
+    
+    .history_photo{
+        width: 500px;
+    }
+     img-contact{
+        display: none;
+    }
+        .color1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.color2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.color3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.color4 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.color5 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+}
+}

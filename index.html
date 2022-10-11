@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="ru-RU">
+    <head>
+        <title>Приглашение на свадьбу</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // конечная дата
+      const deadline = new Date('Nov 11 2022 15:00:00');
+      // id таймера
+      let timerId = null;
+      // склонение числительных
+      function declensionNum(num, words) {
+        return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+      }
+      // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
+      function countdownTimer() {
+        const diff = deadline - new Date();
+        if (diff <= 0) {
+          clearInterval(timerId);
+        }
+        const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+        const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+        const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+        const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+        $days.textContent = days < 10 ? '0' + days : days;
+        $hours.textContent = hours < 10 ? '0' + hours : hours;
+        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+        $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+        $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
+        $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
+        $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
+        $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
+        
+      }
+      // получаем элементы, содержащие компоненты даты
+      const $days = document.querySelector('.timer__days');
+      const $hours = document.querySelector('.timer__hours');
+      const $minutes = document.querySelector('.timer__minutes');
+      const $seconds = document.querySelector('.timer__seconds');
+      // вызываем функцию countdownTimer
+      countdownTimer();
+      // вызываем функцию countdownTimer каждую секунду
+      timerId = setInterval(countdownTimer, 1000);
+    });
+  </script>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><a href="#intro">Приглашение</a></li>
+                <li><a href="#history">О нас</a></li>
+                <li><a href="#ceremony">О церемонии</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#color">Цвета</a></li>
+            </ul>
+        </header>
+        <div id="intro"> 
+               <div class="timer">
+                <div>
+                    <p class="intro_text1">Будем рады видеть вас <br>на нашей свадьбе!</p>
+                    <p class="intro_text2">11.11.2022</p>
+                </div>
+                <div>
+                    <a href="#ceremony" class="boot">Подробнее</a>
+                </div>
+                <div><p class="intro_text3">До свадьбы осталось:</p></div>
+            <section class="invit">
+                <div class="timer_a">
+                    <div class="timer__items">
+                      <div class="timer__item timer__days">00</div>
+                      <div class="timer__item timer__hours">00</div>
+                      <div class="timer__item timer__minutes">00</div>
+                      <div class="timer__item timer__seconds">00</div>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </div>
+        <div id="history">
+               <p class="meeting">О нас</p>
+               <div class="history_content">
+                <span class="history_photo"><img src="img/W5AS09j_AsU.jpg"></span>
+                <div class="history1">
+                    <div class="title">
+                        <span>
+                            Наш день!
+                        </span>
+                    </div>
+                    <div class="history_history"><p>Свадьба — это сказочное событие, которое ждёт с нетерпением каждая любящая пара. Свадьба сулит о новой интересной страничке в вашей совместной жизни.
+В этот необыкновенно прекрасный день вступает в силу магия любви и красоты. Каждые влюбленные сердца стремятся, чтобы этот праздник был наполнен сказочными впечатлениями и восхитительными воспоминаниями.</p>
+                    </div>
+                </div>
+            </div>
+               <br>
+                <a href="#ceremony" class="boot2">Подробнее</a><br>
+        </div>
+        <section id="ceremony">
+           <div class="ceremony">
+           <p>О церемонии</p>
+           </div>
+             </section>
+              <div class="adres">
+                <div class="aa"><p class="adres-text"><span class="namber">1.</span> Регистрация <br>Дворец бракосочетания <br> г. Красноярск ул. Дубровенского 106.<br><span class="time">Время</span> 15:00</p></div>
+                <div class="regist_map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Add92fdbc5f93051b9c0ab7fd80e3350087008f710e85363b9ad1aa2d362d2caf&amp;width=600&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script></div>
+                
+                <div class="aa"><p class="adres-text"><span class="namber">2.</span> Банкет <br>Ресторан "Император" ул. Калинина 94.<br><span class="time">Время</span> 18:00</p></div>
+                <div class="night_map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A33e0b2b7abd4cc3403381f9e0266864ab743ca68dc1736364c8376b4a60de2cd&amp;width=600&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script></div>
+                </div>
+
+        <div id="contacts">Наши контакты</div>
+        <section class="contacts">
+           <div class="cont">
+               <div class="img-cintact">
+                <img src="img/1.jpg" width="500px" height="" class="img-contact">
+               </div>
+           <div class="mesenger">
+              <p class="qq">Вы можете связаться с нами.</p>
+               <div class="olga">
+                   <p>Елена</p>
+                   <a href="https://vk.com/lenok55587"><div class="vk"></div></a>
+                   <div class="phone">
+                       <div class="icon-phone"></div>
+                       <a class="xxx" href="tel:+79235825369">+7 (923) 582-53-69 </a>
+                   </div>
+                   </div>
+               <div class="paha">
+                   <p>Владимир</p>
+                   <a href="https://vk.com/id41368995"><div class="vk"></div></a>
+                   <div class="phone">
+                       <div class="icon-phone"></div>
+                       <a class="xxx" href="tel:+79293382877">+7 (929) 338-28-77</a>
+                   </div>
+               </div>
+           </div>
+            </div>
+        </section>
+    </body>
+</html>
